@@ -6,9 +6,8 @@
         <mirror>
             <id>codelogic</id>
             <mirrorOf>codelogic</mirrorOf>
-            <url>${CL_HOST}/codelogic/server</url>
+            <url>http://ec2-18-118-26-255.us-east-2.compute.amazonaws.com/codelogic/server</url>
         </mirror>
-
         <mirror>
             <id>central</id>
             <mirrorOf>central</mirrorOf>
@@ -17,38 +16,38 @@
         <profile>
             <id>codelogic</id>
             <properties>
-                <codelogic.url>${CL_HOST}/codelogic/server</codelogic.url>
-                <codelogic.oauth.username>${CL_AGENT_USER}</codelogic.oauth.username>
-                <codelogic.oauth.password>${CL_AGENT_PASS}</codelogic.oauth.password>
+                <codelogic.url>http://ec2-18-118-26-255.us-east-2.compute.amazonaws.com/codelogic/server</codelogic.url>
+                <codelogic.oauth.username>f471a202-4354-437f-bd4e-82b1f55e220c</codelogic.oauth.username>
+                <codelogic.oauth.password>v1VeeK1Mt6S2eVEf</codelogic.oauth.password>
                 <codelogic.batchSize>2000</codelogic.batchSize>
                 <codelogic.methodInvokesScanningEnabled>true</codelogic.methodInvokesScanningEnabled>
-                <codelogic.methodInvokesScanningPackageIncludeList>${PACKAGE_NAME}</codelogic.methodInvokesScanningPackageIncludeList>
-                <codelogic.applicationGroups>${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}</codelogic.applicationGroups>
+                <codelogic.methodInvokesScanningPackageIncludeList>com.example</codelogic.methodInvokesScanningPackageIncludeList>
+                <codelogic.applicationGroups>JavaClientDemo</codelogic.applicationGroups>
                 <codelogic.expungeScanSessions>true</codelogic.expungeScanSessions>
                 <codelogic.rescan>true</codelogic.rescan>
+                <codelogic.scanSpaceName>SCANSPACE</codelogic.scanSpaceName>
             </properties>
             <repositories>
                 <repository>
                     <id>codelogic</id>
                     <name>codelogic</name>
-                    <url>${CL_HOST}/codelogic/server/packages/maven/libs-release</url>
-                </repository>
-                <repository>
-                    <id>central</id>
-                    <name>libs-release</name>
-                    <url>https://repo.maven.apache.org/maven2/</url>
+                    <url>http://ec2-18-118-26-255.us-east-2.compute.amazonaws.com/codelogic/server/packages/maven/libs-release</url>
                 </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
                     <id>codelogic</id>
                     <name>codelogic</name>
-                    <url>${CL_HOST}/codelogic/server/packages/maven/libs-release</url>
+                    <url>http://ec2-18-118-26-255.us-east-2.compute.amazonaws.com/codelogic/server/packages/maven/libs-release</url>
                 </pluginRepository>
                 <pluginRepository>
-                        <id>repository.spring.release</id>
-                        <name>Spring GA Repository</name>
-                        <url>https://repo.spring.io/plugins-release/</url>
+                    <id>mavencentral</id>
+                    <url>https://repo.maven.apache.org/maven2</url>
+                </pluginRepository>
+                <pluginRepository>
+                     <id>repository.spring.release</id>
+                    <name>Spring GA Repository</name>
+                    <url>https://repo.spring.io/plugins-snapshot/</url>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
