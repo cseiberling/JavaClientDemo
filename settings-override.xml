@@ -25,7 +25,7 @@
                 <codelogic.applicationGroups>JavaClientDemo</codelogic.applicationGroups>
                 <codelogic.expungeScanSessions>true</codelogic.expungeScanSessions>
                 <codelogic.rescan>true</codelogic.rescan>
-                <codelogic.scanSpaceName>SCANSPACE</codelogic.scanSpaceName>
+                <codelogic.scanSpaceName>https://github.com/cseiberling/JavaClientDemo|feature/enhancement2</codelogic.scanSpaceName>
             </properties>
             <repositories>
                 <repository>
