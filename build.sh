@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-BRANCH=main
+BRANCH=feature-enhancement1
 sed -i "s/BRANCHVERSION/$BRANCH/g" pom.xml
 
 #PRSCANSPACE="Default"
