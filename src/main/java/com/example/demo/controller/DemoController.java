@@ -17,12 +17,12 @@ public class DemoController {
     private AuthService authService;
     @Autowired
     private DemoService demoService;
-    @GetMapping(value = "/getUser1",
+    @GetMapping(value = "/getUser123",
     produces = { "application/json"},consumes = { "application/json"})
     String getUser() throws Exception {
         return authService.getUser();
     }
-    @RequestMapping(value = "/getDemoInfo1", method = RequestMethod.GET)
+    @RequestMapping(value = "/getDemoInfo123", method = RequestMethod.GET)
     String getDemoInfo() throws Exception {
         return demoService.getInfo();
     }
