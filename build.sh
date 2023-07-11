@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-BRANCH=main
+BRANCH=feature/DEMO-1901
 sed -i "s/BRANCHVERSION/$BRANCH/g" pom.xml
 echo "test"
 
