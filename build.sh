@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 BRANCH=main
 sed -i "s/BRANCHVERSION/$BRANCH/g" pom.xml
+echo "test"
 
 #PRSCANSPACE="Default"
 # For Pull requests:
