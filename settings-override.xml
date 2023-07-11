@@ -18,7 +18,7 @@
             <properties>
                 <codelogic.url>http://ec2-18-118-26-255.us-east-2.compute.amazonaws.com/codelogic/server</codelogic.url>
                 <codelogic.oauth.username>f471a202-4354-437f-bd4e-82b1f55e220c</codelogic.oauth.username>
-                <codelogic.oauth.password>v1VeeK1Mt6S2eVEf</codelogic.oauth.password>
+                <codelogic.oauth.password>1sMvC7MiG4M4Xqrq</codelogic.oauth.password>
                 <codelogic.batchSize>2000</codelogic.batchSize>
                 <codelogic.methodInvokesScanningEnabled>true</codelogic.methodInvokesScanningEnabled>
                 <codelogic.methodInvokesScanningPackageIncludeList>com.example</codelogic.methodInvokesScanningPackageIncludeList>
