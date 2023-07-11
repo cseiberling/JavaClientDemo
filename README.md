@@ -1,1 +1,2 @@
 # javaDemo
+Test demo application
