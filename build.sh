@@ -4,7 +4,7 @@ sed -i "s/BRANCHVERSION/$BRANCH/g" pom.xml
 
 #PRSCANSPACE="Default"
 # For Pull requests:
-PRSCANSPACE="https://github.com/cseiberling/JavaClientDemo|feature/enhancement1"
+PRSCANSPACE="https://github.com/cseiberling/JavaClientDemo|feature/DEMO-1901"
 sed -i "s/SCANSPACE/$SCANSPACE/g" settings-override.xml
 
 #mvn clean package -DskipTests
