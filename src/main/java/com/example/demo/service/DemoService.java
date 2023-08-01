@@ -31,7 +31,7 @@ public class DemoService {
             HttpHeaders headers = new HttpHeaders();
             headers.set("Content-Type", "application/json");
             HttpEntity entity = new HttpEntity(headers);
-            ResponseEntity<String> response = restTemplate.exchange(this.demoUrl + "/getDemoInformation1", HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> response = restTemplate.exchange(this.demoUrl + "/getDemoInformation4", HttpMethod.GET, entity, String.class);
             return response.getBody();
         } catch (Exception e) {
             throw new Exception(e.getMessage());
