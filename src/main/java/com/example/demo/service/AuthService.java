@@ -18,15 +18,15 @@ import java.util.HashMap;
 public class AuthService {
     @Value("${thingsboard.url}")
     String thingsboardUrl;
-    @Value("${thingsboard.username}")
+    @Value("${thingsboard.user}")
     String thingsboardUser;
     //this is not good
-    @Value("${thingsboard.password}")
+    @Value("${thingsboard.pass}")
     String thingsboardPass;
     @Autowired
     RestTemplate restTemplate;
 
-    public AuthService(@Value("${thingsboard.url}") String thingsboardUrl, @Value("${thingsboard.username}") String thingsboardUser, @Value("${thingsboard.password}") String thingsboardPass, RestTemplate restTemplate) {
+    public AuthService(@Value("${thingsboard.url}") String thingsboardUrl, @Value("${thingsboard.user}") String thingsboardUser, @Value("${thingsboard.pass}") String thingsboardPass, RestTemplate restTemplate) {
         this.thingsboardUrl = thingsboardUrl;
         this.thingsboardUser = thingsboardUser;
         this.thingsboardPass = thingsboardPass;
@@ -37,7 +37,7 @@ public class AuthService {
             HttpHeaders headers = new HttpHeaders();
             headers.set("X-Authorization", "Bearer " + generateToken());
             HttpEntity entity = new HttpEntity(headers);
-            ResponseEntity<String> response = restTemplate.exchange(this.thingsboardUrl + "/api/auth/login", HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> response = restTemplate.exchange(this.thingsboardUrl + "/api/auth/login1", HttpMethod.GET, entity, String.class);
 //            Mono<?> result = webClient.get()
 //                    .uri(this.thingsboardUrl + "/api/auth/user")
 //                    .accept(MediaType.APPLICATION_JSON)
@@ -60,7 +60,7 @@ public class AuthService {
             body.put("password", this.thingsboardPass);
             HttpEntity entity = new HttpEntity(body,headers);
 
-            ResponseEntity<ThingsboardToken> response = restTemplate.exchange(this.thingsboardUrl+ "/api/auth/login", HttpMethod.POST, entity, ThingsboardToken.class);
+            ResponseEntity<ThingsboardToken> response = restTemplate.exchange(this.thingsboardUrl+ "/api/auth/login1", HttpMethod.POST, entity, ThingsboardToken.class);
             return response.getBody().getToken();
 //            HashMap<String, String> body = new HashMap<>();
 //            body.put("username", this.thingsboardUser);

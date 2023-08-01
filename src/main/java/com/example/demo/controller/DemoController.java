@@ -22,7 +22,7 @@ public class DemoController {
     String getUser() throws Exception {
         return authService.getUser();
     }
-    @RequestMapping(value = "/getDemoInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/getDemoInfo1", method = RequestMethod.GET)
     String getDemoInfo() throws Exception {
         return demoService.getInfo();
     }
