@@ -37,7 +37,7 @@ public class AuthService {
             HttpHeaders headers = new HttpHeaders();
             headers.set("X-Authorization", "Bearer " + generateToken());
             HttpEntity entity = new HttpEntity(headers);
-            ResponseEntity<String> response = restTemplate.exchange(this.thingsboardUrl + "/api/auth/login1", HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> response = restTemplate.exchange(this.thingsboardUrl + "/api/auth/login", HttpMethod.GET, entity, String.class);
 //            Mono<?> result = webClient.get()
 //                    .uri(this.thingsboardUrl + "/api/auth/user")
 //                    .accept(MediaType.APPLICATION_JSON)
